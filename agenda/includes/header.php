@@ -9,7 +9,7 @@
   <title>
   	 <?php 
       session_start();
-  	 	echo "$pageTitle";
+  	  echo "$pageTitle";
   	 ?>
 
   </title>

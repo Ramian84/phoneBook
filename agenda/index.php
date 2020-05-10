@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
   
   <?php
-    checkUserLogin();
+  require_once('includes/config.php');
+  require_once('includes/header.php');
+    
+  checkUserLogin();
 
-    $pageTitle = "Agenda - Dashboard "; 
-    require_once('includes/header.php');
+  $pageTitle = "Agenda - Dashboard "; 
+    
   ?>
 
 </head>
