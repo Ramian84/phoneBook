@@ -1,5 +1,3 @@
 Version 1.0.0
 	10 05 2020
-	-- refactor login mechanism to user MD5 hash function
-	-- refactor login mechanism to user MD5 hash function
-	-- refactor login mechanism to user MD5 hash function
+	-- refactor login mechanism to user MD5 hash function	
