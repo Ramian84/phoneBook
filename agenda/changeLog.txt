@@ -1,3 +1,14 @@
+Version 1.0.1
+	12.05.2020
+	-- folder creation and refactoring to delimitate admin content and user content
+    -- validating Contact owner to be the same with Session user on delete contact
+    -- new page 404.php created
+    -- Fixed export, in .csv format, functionality for users
+	13.05.2020
+	 -- validating Contact owner to be the same with Session user on editing contact
+	 -- creation for profile page , edit user functionality
+	 -- display profile picture from database
+
 Version 1.0.0
 	10 05 2020
 	-- refactor login mechanism to user MD5 hash function	

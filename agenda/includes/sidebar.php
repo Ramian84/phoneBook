@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
@@ -61,7 +64,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="Contacts.php">
+        <a class="nav-link" href="viewContacts.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Contacts</span></a>
       </li>

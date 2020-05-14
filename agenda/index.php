@@ -1,15 +1,15 @@
-  
   <?php
+  $pageTitle = "Agenda - Dashboard "; 
   require_once('includes/config.php');
   require_once('includes/header.php');
     
   checkUserLogin();
 
-  $pageTitle = "Agenda - Dashboard "; 
+ 
     
   ?>
 
-</head>
+
 
 <body id="page-top">
 
@@ -42,6 +42,8 @@
           <?php 
             require_once('includes/topbar.php');
           ?>
+          
+          </nav>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
@@ -54,50 +56,11 @@
           </div>
 
           <!-- Content Row -->
-         
-
-            <!-- Earnings (Monthly) Card Example -->
+                         
     
-
-            <!-- Earnings (Monthly) Card Example -->
- 
-            <!-- Earnings (Monthly) Card Example -->
- 
-            <!-- Pending Requests Card Example -->
-       
-
-          <!-- Content Row -->
-
-       
-
-            <!-- Area Chart -->
-     
-
-            <!-- Pie Chart -->
-    
-                <!-- Card Body -->
-       
-
-          <!-- Content Row -->
-          
-
-            <!-- Content Column -->
-         
-
-              <!-- Project Card Example -->
-              
-
-              <!-- Color System -->
-              
-              <!-- Illustrations -->
-              
-              <!-- Approach -->
-              
-
-        
         <!-- /.container-fluid -->
-
-     
+	
+    	</div> 
       <!-- End of Main Content -->
 
       <!-- Footer -->

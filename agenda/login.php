@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <?php
-    session_start();
+ <?php    
     $pageTitle = 'Agenda Login';
     require_once('includes/header.php');
-    require_once('includes/db.php');
+    require_once('includes/config.php');
     $message="";
 
       if(isset($_POST['submit'])){
         $userName = $_POST['user_name'];
         $password = $_POST['password'];
 
-        $selectUserString = "SELECT * FROM users WHERE user_name= '".$userName."' AND password = md5('".$password."')";
+        $selectUserString = "SELECT * FROM users WHERE user_name= '".$userName."' AND password = md5('".$password."') AND enabled = 1";
         $selectUserQuery  = mysqli_query($conn,$selectUserString);
         if(!$selectUserQuery) {
           $message = "Invalid Username or Password!";
-          die("QUERY FAILED" . mysli_error($conn));
+          die("QUERY FAILED" . mysqli_error($conn));
         }
         
         if (mysqli_num_rows($selectUserQuery) == 1){
@@ -27,7 +21,7 @@
               $db_userId = $row['id'];
               $db_userName = $row['user_name'];
               $db_userPassword = $row['password'];
-              $db_userRole = $row['user_role'];
+              $db_userRole = $row['role'];
             }
 
              $_SESSION['id'] = $db_userId;
@@ -35,7 +29,11 @@
              $_SESSION['password'] = $db_userPassword;
              $_SESSION['role'] = $db_userRole;
 
-             header('Location: index.php');            
+             if($db_userRole === 'admin') {
+                header('Location: admin/index.php');
+             }else{
+                header('Location: user/index.php');
+             }
 
         }else {
 
@@ -46,7 +44,7 @@
       }
 
 
-  ?>
+?>
 
 </head>
 
@@ -67,7 +65,7 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome to Agenda App!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Welcome to Phone Book App!</h1>
                   </div>
                   <form class="user" method="post" >
                       <div class="message"><?php if($message!="") { echo $message; } ?></div>

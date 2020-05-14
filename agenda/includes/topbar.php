@@ -1,6 +1,6 @@
           <?php 
             $username = $_SESSION['username'];
-            $role = $_SESSION['role'];
+            $role     = $_SESSION['role'];
           ?>
 
           <?php 
@@ -12,15 +12,7 @@
 
            ?>
           <ul class="navbar-nav ml-auto">
-
-            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-               
-
-            <!-- Nav Item - Alerts -->
-
-            <!-- Nav Item - Messages -->
-       
-
+   
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -53,7 +45,7 @@
 
           </ul>
 
-        </nav>
+    
 
 
           <!-- Logout Modal-->
